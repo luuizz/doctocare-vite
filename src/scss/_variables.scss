@@ -1,0 +1,20 @@
+$primary-blue-01: #0a4378;
+$primary-blue-02: #1971c2;
+$primary-blue-03: #d0ebff;
+$primary-blue-04: #f0f9ff;
+
+$secondary-gray-01: #212529;
+$secondary-gray-02: #495057;
+$secondary-gray-03: #f9f9f9;
+$secondary-gray-04: #fff;
+
+:root {
+  --primary-blue-01: #{$primary-blue-01};
+  --primary-blue-02: #{$primary-blue-02};
+  --primary-blue-03: #{$primary-blue-03};
+  --primary-blue-04: #{$primary-blue-04};
+  --secondary-gray-01: #{$secondary-gray-01};
+  --secondary-gray-02: #{$secondary-gray-02};
+  --secondary-gray-03: #{$secondary-gray-03};
+  --secondary-gray-04: #{$secondary-gray-04};
+}
