@@ -1,6 +1,14 @@
 header {
   height: 7.2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2025;
   @include flex-center;
+  &.fixed {
+    background-color: $secondary-gray-04;
+  }
   .container {
     @include flex(row, center, space-between);
     nav {
@@ -15,8 +23,12 @@ header {
             position: relative;
             font-size: 1.6rem;
             transition: all 0.3s ease;
-            color: $primary-blue-02;
+            color: rgba($color: $primary-blue-02, $alpha: 0.7);
+            &:hover {
+              color: rgba($color: $primary-blue-02, $alpha: 1);
+            }
             &.active {
+              color: rgba($color: $primary-blue-02, $alpha: 1);
               font-weight: 700;
               &::after {
                 content: "";
