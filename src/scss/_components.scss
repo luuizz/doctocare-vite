@@ -18,6 +18,12 @@
     background: $primary-blue-02;
     color: $secondary-gray-04;
     padding: 1.6rem 3.2rem;
+    &.white {
+      background-color: $secondary-gray-04;
+      .text-btn {
+        color: $primary-blue-02 !important;
+      }
+    }
     &:hover {
       background-color: $primary-blue-01;
     }
