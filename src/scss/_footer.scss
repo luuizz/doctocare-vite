@@ -1,0 +1,36 @@
+footer {
+  background-color: $primary-blue-02;
+  padding: 8rem 0;
+  .container {
+    @include flexCenterJustify;
+    .left {
+      p {
+        font-size: 1.4rem;
+        color: $secondary-gray-04;
+        font-weight: 400;
+      }
+      .copy {
+        margin-bottom: 1.5rem;
+        margin-top: 2.4rem;
+      }
+    }
+    .social {
+      ul {
+        @include flex-center;
+        gap: 3.2rem;
+        li {
+          a {
+            transition: all 0.3s ease;
+            &:hover {
+              opacity: 0.5;
+            }
+            i {
+              font-size: 2.4rem;
+              color: $secondary-gray-04;
+            }
+          }
+        }
+      }
+    }
+  }
+}
