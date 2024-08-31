@@ -1,5 +1,8 @@
 import "./scss/main.scss";
 import $ from "jquery";
 import "@phosphor-icons/web/regular";
+import { slidesTestimonials } from "./Slide.js";
 
-$("body").append("<h1>Eu sou eu</h1>");
+$(document).ready(function () {
+  slidesTestimonials.init();
+});
