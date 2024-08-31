@@ -89,3 +89,40 @@
     }
   }
 }
+
+.s-testimonials {
+  padding: 16rem 0 31.7rem;
+  .container {
+    .top-area {
+      width: 100%;
+      max-width: 48.1rem;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 6rem;
+      h2 {
+        font-size: 4rem;
+        color: $secondary-gray-01;
+      }
+    }
+    .slides-testimonials {
+      overflow-x: hidden;
+      .swiper-wrapper {
+      }
+    }
+    .swiper-pagination {
+      position: relative;
+      bottom: -4.9rem;
+      width: auto;
+      transition: all 0.5s ease;
+      &-bullet {
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: $primary-blue-03;
+        opacity: 1;
+        &-active {
+          background-color: $primary-blue-02;
+        }
+      }
+    }
+  }
+}
