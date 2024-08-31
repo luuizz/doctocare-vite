@@ -18,6 +18,9 @@
     background: $primary-blue-02;
     color: $secondary-gray-04;
     padding: 1.6rem 3.2rem;
+    &:hover {
+      background-color: $primary-blue-01;
+    }
   }
   &-secondary {
     background: transparent;
