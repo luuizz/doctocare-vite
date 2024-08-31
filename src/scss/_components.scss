@@ -1,0 +1,78 @@
+.btn {
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 10rem;
+  &.icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.6rem;
+    .text-btn {
+      color: $secondary-gray-04 !important;
+      margin-bottom: 0 !important;
+    }
+  }
+  &-primary {
+    font-size: 1.4rem;
+    background: $primary-blue-02;
+    color: $secondary-gray-04;
+    padding: 1.6rem 3.2rem;
+  }
+  &-secondary {
+    background: transparent;
+    border: 1px solid $primary-blue-02;
+    color: $primary-blue-02;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.6rem;
+    &:hover {
+      background: $primary-blue-02;
+      color: $secondary-gray-04;
+    }
+  }
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.112rem;
+  color: $primary-blue-02;
+  margin-bottom: 1.6rem;
+  display: block;
+}
+
+.card {
+  padding: 2.4rem;
+  width: 100%;
+  max-width: 34.7rem;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.6rem;
+  background-color: $secondary-gray-04;
+  border: 1px solid $primary-blue-03;
+  .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    @include flex-total-center;
+    background-color: $primary-blue-04;
+    border-radius: 50%;
+    i {
+      font-size: 1.6rem;
+      color: $primary-blue-02;
+    }
+  }
+  h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $secondary-gray-01;
+  }
+  p {
+    font-size: 1.6rem;
+    color: $secondary-gray-02;
+  }
+}
