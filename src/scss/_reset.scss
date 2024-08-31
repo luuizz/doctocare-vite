@@ -11,6 +11,20 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-blue-02;
+    border-radius: 0.4rem;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $secondary-gray-03;
+    border-radius: 0.4rem;
+  }
+}
+
 img {
   max-width: 100%;
   display: block;
