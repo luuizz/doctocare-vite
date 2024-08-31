@@ -187,3 +187,51 @@
     }
   }
 }
+
+.s-contact {
+  padding: 16rem 0;
+  .container {
+    @include flexCenterJustify;
+    .left {
+      flex: 1;
+      max-width: 40.4rem;
+      h2 {
+        font-size: 4rem;
+        color: $secondary-gray-01;
+        margin-bottom: 4rem;
+        width: 40.4rem;
+        text-wrap: balance;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        margin-bottom: 4rem;
+        li {
+          a {
+            @include flex-center;
+            gap: 0.8rem;
+            transition: opacity 0.3s ease;
+            &:hover {
+              opacity: 0.5;
+            }
+            i {
+              color: $primary-blue-02;
+              font-size: 2.4rem;
+            }
+            span {
+              font-size: 1.6rem;
+              color: $secondary-gray-02;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      flex: 1;
+      max-width: 57.5rem;
+      overflow: hidden;
+      border-radius: 2rem;
+    }
+  }
+}
