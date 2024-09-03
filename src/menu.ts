@@ -58,7 +58,14 @@ export function initMenu() {
   });
 
   $(".btn-menu").click(function () {
-    $(this).toggleClass("active");
     $(".aside-menu").toggleClass("active");
+    if ($(".aside-menu").hasClass("active")) {
+      $(this).attr("aria-label", "Fechar menu");
+    } else {
+      $(this).attr("aria-label", "Abrir menu");
+    }
+
+    // Alterna a classe 'active' no botão
+    $(this).toggleClass("active");
   });
 }
