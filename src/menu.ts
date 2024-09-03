@@ -56,4 +56,9 @@ export function initMenu() {
         : header.removeClass("fixed");
     }
   });
+
+  $(".btn-menu").click(function () {
+    $(this).toggleClass("active");
+    $(".aside-menu").toggleClass("active");
+  });
 }
