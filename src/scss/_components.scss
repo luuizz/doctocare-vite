@@ -90,6 +90,18 @@
     font-size: 1.6rem;
     color: $secondary-gray-02;
   }
+  @include responsive("laptop") {
+    h3 {
+      width: 19.2rem;
+      text-wrap: balance;
+    }
+  }
+  @include responsive("tablet") {
+    max-width: 100%;
+    h3 {
+      width: 100%;
+    }
+  }
 }
 
 .card-testimonials {

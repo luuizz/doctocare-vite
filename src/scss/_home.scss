@@ -27,6 +27,53 @@
       max-width: 42rem;
     }
   }
+  @include responsive("laptop") {
+    .container {
+      .left-hero {
+        max-width: 57.5rem;
+      }
+    }
+  }
+  @include responsive("laptop-xs") {
+    .container {
+      .left-hero {
+        h1 {
+          font-size: 4.8rem;
+        }
+      }
+    }
+  }
+  @include responsive("tablet") {
+    padding-top: 16rem;
+    .container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .left-hero {
+        text-align: center;
+      }
+    }
+  }
+  @include responsive("mobile") {
+    padding-top: 12rem;
+    padding-bottom: 25.2rem;
+    .container {
+      gap: 6rem;
+      .left-hero {
+        max-width: 100%;
+        h1 {
+          font-size: 3.4rem;
+          text-wrap: balance;
+        }
+        p {
+          text-wrap: balance;
+        }
+      }
+      .right-hero {
+        max-width: 26.1rem;
+      }
+    }
+  }
 }
 
 .s-values {
@@ -63,6 +110,65 @@
       }
     }
   }
+  @include responsive("laptop") {
+    margin-top: -12.3rem;
+    .box {
+      ul {
+        justify-content: center;
+        li {
+          @include flex(column, center, center);
+          p {
+            width: 10rem;
+            text-wrap: balance;
+          }
+        }
+      }
+    }
+  }
+  @include responsive("laptop-xs") {
+    .box {
+      padding: 6rem 8rem;
+    }
+  }
+  @include responsive("tablet") {
+    .box {
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-right: 7.5rem;
+            padding-right: 7.5rem;
+          }
+        }
+      }
+    }
+  }
+  @include responsive("tablet-md") {
+    max-width: 55rem;
+    .box {
+      padding: 4rem 7.2rem;
+      ul {
+        flex-direction: column;
+        gap: 6rem;
+        li {
+          p {
+            width: 100%;
+          }
+          &:not(:last-child) {
+            margin-right: 0;
+            padding-right: 0;
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+  @include responsive("mobile") {
+    max-width: 32.7rem;
+    margin-top: -25.4rem;
+    .box {
+      padding: 4rem;
+    }
+  }
 }
 
 .s-services {
@@ -86,6 +192,45 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 4rem;
+    }
+  }
+  @include responsive("laptop") {
+    padding-top: 20rem;
+    .container {
+      .all-cards {
+        gap: 2.4rem;
+      }
+    }
+  }
+  @include responsive("laptop-xs") {
+    padding-top: 17rem;
+  }
+  @include responsive("tablet") {
+    padding-bottom: 10rem;
+    .container {
+      .all-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+  @include responsive("tablet-md") {
+    margin-top: -34.9rem;
+    padding-top: calc(35rem + 10rem);
+  }
+  @include responsive("mobile") {
+    margin-top: -21.7rem;
+    padding-top: calc(21.7rem + 10rem);
+    .container {
+      .top {
+        h2 {
+          font-size: 3rem;
+          text-wrap: balance;
+        }
+      }
+      .all-cards {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 0.9rem;
+      }
     }
   }
 }
