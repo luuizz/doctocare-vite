@@ -39,6 +39,12 @@
       color: $secondary-gray-04;
     }
   }
+  @include responsive("tablet") {
+    &-primary,
+    &-secondary {
+      padding: 1.6rem 3.2rem;
+    }
+  }
 }
 
 .subtitle {
