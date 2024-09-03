@@ -43,6 +43,35 @@ header {
         }
       }
     }
+    .aside-menu {
+      background-color: $primary-blue-02;
+      nav {
+        .links-menu {
+          li {
+            a {
+              color: rgba(255, 255, 255, 0.65);
+            }
+          }
+        }
+        .btn-secondary {
+          border: 1px solid $secondary-gray-04;
+          color: $secondary-gray-04;
+          &:hover {
+            background-color: $secondary-gray-04;
+            color: $primary-blue-02;
+          }
+        }
+      }
+      .socials {
+        li {
+          a {
+            i {
+              color: $secondary-gray-04;
+            }
+          }
+        }
+      }
+    }
   }
   .container {
     @include flex(row, center, space-between);
@@ -78,6 +107,122 @@ header {
             }
           }
         }
+      }
+    }
+    .btn-menu {
+      display: none;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      &.active {
+        .btn-mobile-inner {
+          border-top-color: transparent;
+          &::after,
+          &::before {
+            margin-top: 0;
+          }
+
+          &::after {
+            top: -0.2rem;
+            transform: rotate(45deg);
+          }
+          &::before {
+            top: 0rem;
+            transform: rotate(135deg);
+          }
+        }
+      }
+      .btn-mobile-inner {
+        width: 100%;
+        display: block;
+        height: auto;
+        border-top: 2px solid;
+        cursor: pointer;
+        color: $primary-blue-02;
+        &::after,
+        &::before {
+          content: "";
+          display: block;
+          height: 0.2rem;
+          margin-top: 0.9rem;
+          background: currentColor;
+          transition: transform 0.2s ease;
+          position: relative;
+        }
+      }
+    }
+  }
+  .aside-menu {
+    position: absolute;
+    top: 7.4rem;
+    width: 100%;
+    height: calc(100vh - 7.4rem);
+    background-color: $secondary-gray-04;
+    padding: 7rem 1.5rem;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    z-index: 2025;
+    @include flex(column, center, center);
+    nav {
+      text-align: center;
+      .links-menu {
+        margin-bottom: 4.8rem;
+        li {
+          &:not(:last-child) {
+            margin-bottom: 4.8rem;
+          }
+          a {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: $primary-blue-02;
+          }
+        }
+      }
+      .btn-secondary {
+        font-size: 1.8rem;
+      }
+    }
+    .socials {
+      margin-top: 8rem;
+      @include flex-total-center;
+      gap: 3.2rem;
+      li {
+        a {
+          i {
+            font-size: 2.4rem;
+            color: $primary-blue-02;
+          }
+        }
+      }
+    }
+    &.active {
+      pointer-events: all;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0%);
+    }
+  }
+  @include responsive("tablet") {
+    &.fixed {
+      .container {
+        .btn-menu {
+          .btn-mobile-inner {
+            color: $secondary-gray-04;
+          }
+        }
+      }
+    }
+    .container {
+      nav {
+        display: none;
+      }
+      .btn-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
