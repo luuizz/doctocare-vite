@@ -6,8 +6,43 @@ header {
   left: 0;
   z-index: 2025;
   @include flex-center;
+  z-index: 2025;
+  transition: all 0.3s ease;
   &.fixed {
-    background-color: $secondary-gray-04;
+    background-color: $primary-blue-02;
+    height: 7.5rem;
+    .container {
+      .logo {
+        width: 13.4rem;
+        img {
+          content: url("/logo-white.svg");
+        }
+      }
+      nav {
+        ul {
+          li {
+            a {
+              color: rgba(255, 255, 255, 0.65);
+              &::after {
+                background-color: $secondary-gray-04;
+              }
+              &.active,
+              &:hover {
+                color: rgba(255, 255, 255, 1);
+              }
+            }
+          }
+        }
+        .btn-secondary {
+          border: 1px solid $secondary-gray-04;
+          color: $secondary-gray-04;
+          &:hover {
+            background-color: $secondary-gray-04;
+            color: $primary-blue-02;
+          }
+        }
+      }
+    }
   }
   .container {
     @include flex(row, center, space-between);
@@ -24,20 +59,21 @@ header {
             font-size: 1.6rem;
             transition: all 0.3s ease;
             color: rgba($color: $primary-blue-02, $alpha: 0.7);
+            &::after {
+              content: "";
+              width: 0px;
+              height: 2px;
+              background: $primary-blue-02;
+              position: absolute;
+              bottom: -2.4rem;
+              left: 0;
+              transition: 0.3s ease;
+            }
+            &.active,
             &:hover {
               color: rgba($color: $primary-blue-02, $alpha: 1);
-            }
-            &.active {
-              color: rgba($color: $primary-blue-02, $alpha: 1);
-              font-weight: 700;
               &::after {
-                content: "";
                 width: 100%;
-                height: 2px;
-                background: $primary-blue-02;
-                position: absolute;
-                bottom: -2.4rem;
-                left: 0;
               }
             }
           }
