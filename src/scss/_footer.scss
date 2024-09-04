@@ -33,4 +33,24 @@ footer {
       }
     }
   }
+  @include responsive("mobile") {
+    padding: 6rem 0;
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3.2rem;
+      .left {
+        p {
+          font-size: 1.6rem;
+        }
+        .copy {
+          margin-bottom: 1.2rem;
+        }
+        img {
+          width: 100%;
+          max-width: 23.6rem;
+        }
+      }
+    }
+  }
 }
