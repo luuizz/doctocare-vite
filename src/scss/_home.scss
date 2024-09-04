@@ -463,4 +463,41 @@
       border-radius: 2rem;
     }
   }
+  @include responsive("tablet") {
+    padding: 10rem 0;
+    .container {
+      flex-direction: column;
+      gap: 4rem;
+      .left {
+        text-align: center;
+        ul {
+          align-items: center;
+        }
+      }
+    }
+  }
+  @include responsive("mobile") {
+    .container {
+      gap: 6rem;
+      .left {
+        text-align: left;
+        width: 100%;
+        max-width: 100%;
+        h2 {
+          font-size: 3rem;
+          margin-bottom: 3.2rem;
+          width: 100%;
+          text-wrap: balance;
+        }
+        ul {
+          align-items: flex-start;
+          margin-bottom: 3.2rem;
+        }
+      }
+      .right {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
 }
