@@ -137,4 +137,10 @@
       line-height: 2.8rem;
     }
   }
+  @include responsive("tablet") {
+    max-width: 100%;
+    p {
+      width: 100%;
+    }
+  }
 }
